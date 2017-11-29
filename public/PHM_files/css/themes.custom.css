@@ -1,0 +1,166 @@
+#dashboard-comment div.comment {
+	margin-bottom: 10px;
+    overflow: auto;
+	 word-wrap: break-word;
+}
+
+#dashboard-comment div.comment img {
+	margin: 5px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.stat-panel{
+	min-height: 170px;
+	max-height: 170px;
+}
+
+
+.iphone.phone {
+	background: url( ../../../../assets/img/sms/smartphone.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 500px;
+}
+
+.phone .wrapper{
+	position: absolute;
+	top: 70px;
+	left: 35%;
+	width: 150px;
+    overflow: auto;
+	 word-wrap: break-word;
+}
+
+.sms-offer {
+	background-color: #5baca9;
+	text-align: center;
+	color: white;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+
+}
+
+
+.videolan {
+
+	text-align: center;
+	color: white;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  min-height: 8em;
+  max-height: 8em;
+vertical-align: middle;
+font-width: stronger;
+}
+.videolan.step1 {
+	background-color: #20D2FF;
+
+}
+
+.videolan.step2 {
+	background-color: #5baca9;
+
+}
+.videolan.step3 {
+	background-color: #0088AA;
+
+}
+.videolan.go {
+	background-color: #000;
+}
+.videolan.go a {
+	color: white;
+}
+
+
+
+.webmobile {
+	background-color:white;
+	padding: 5px;
+}
+
+.webmobile .plan {
+
+	text-align: center;
+	color: white;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  min-height: 12em;
+  max-height: 12em;
+	vertical-align: middle;
+	font-width: stronger;
+}
+.webmobile .step1 {
+	background-color: #20D2FF;
+
+}
+
+.webmobile .step2 {
+	background-color: #5baca9;
+
+}
+.webmobile .step3 {
+	background-color: #0088AA;
+
+}
+
+
+.webmobile ul {
+
+    list-style: outside none none;
+    margin: 20px 0;
+    padding: 20px 0;
+
+}
+
+.well  button {
+	font-size: 1em;
+	margin-top: -5px;
+}
+
+.theme-adminflare #main-navbar .dropdown-menu li.active >a {
+  color: #FFF;
+  text-shadow: none;
+  margin: 0 -2px;
+}
+
+#main-navbar li div.notification-description a {
+	line-height: 12px;
+}
+
+form{
+  margin-bottom: 15px;
+  }
+
+
+.bg-ligth-blue {
+  background: #5baca9;
+  color: white;
+}
+
+.bg-dark-blue {
+  background: #5baca9;
+  color: white;
+}
+
+.bg-ligth-purple {
+  background: #5baca9;
+  color: white;
+}
+
+.bg-dark-purple {
+  background: #5baca9;
+  color: white;
+}
+
+.stat-cell a {
+	color:white ;
+}
