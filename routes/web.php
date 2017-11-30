@@ -14,6 +14,8 @@
 Route::get('/', function () {
     return view('medical.index');
 });
+
+Route::get('get','ApiController@getEstid');
 //invoice report
 Route::get('/facturacion', function () {
     return view('invoice.invoice-report');
@@ -22,6 +24,9 @@ Route::get('/facturacion', function () {
 Route::get('/crear-factura', function () {
     return view('invoice.create-invoice');
 });
+
+//submit invoice data to db
+Route::post('submit-invoice','InvoiceController@SubmitInvoice')->name('submit.invoice');
 //suplier
 Route::get('/proveedores', function () {
     return view('invoice.supplier-list');
@@ -51,7 +56,9 @@ Route::get('/factura', function () {
     return view('medical.index');
 });
 
-
+//get path data
 Route::get('/patologias',"PathalogyController@getAllpath");
 
 //pathology action page not created bc only single page is created for only one pathelogy
+//get path data completed using db
+//user, establisment,services,staff,patient
