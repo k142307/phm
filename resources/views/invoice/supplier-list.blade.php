@@ -48,7 +48,6 @@
       </tbody>
 
     </table>
-
     <div class="text-center p20">
       <div class="btn-group">
         {{$sl->links()}}

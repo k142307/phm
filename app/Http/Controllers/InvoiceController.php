@@ -43,6 +43,12 @@ class InvoiceController extends Controller
       # code...
     }
 
+    public function getInvoiceList()
+    {
+      $invoice = invoice::paginate('4',['id','fname','service','invoicedate','payment']);
+      return view('invoice.invoice-list')->with('iv',$invoice);
+    }
+
     public function getInvoiceReport()
     {
       $invoice = invoice::take(5)->get();

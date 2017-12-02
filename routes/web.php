@@ -28,6 +28,11 @@ Route::get('/crear-factura', function () {
 //submit invoice data to db
 Route::post('submit-invoice','InvoiceController@SubmitInvoice')->name('submit.invoice');
 
+Route::get('factura',function()
+{
+  return view('invoice.invoice-detail');
+});
+
 //suplier
 Route::get('/proveedores','SupplierController@showSupplierList');
 
@@ -53,13 +58,9 @@ Route::get('/sgg', function () {
     return view('invoce.index');
 });
 //invoice list
-Route::get('/facturas', function () {
-    return view('invoice.invoice-list');
-});
+Route::get('/facturas','InvoiceController@getInvoiceList');
+
 //generate invoice
-Route::get('/factura', function () {
-    return view('medical.index');
-});
 
 //get path data
 Route::get('/patologias',"PathalogyController@getAllpath");
