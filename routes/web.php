@@ -15,11 +15,11 @@ Route::get('/', function () {
     return view('medical.index');
 });
 
-Route::get('get','ApiController@getEstid');
+Route::get('get','SupplierController@getDate');
+
 //invoice report
-Route::get('/facturacion', function () {
-    return view('invoice.invoice-report');
-});
+Route::get('/facturacion','InvoiceController@getInvoiceReport');
+
 //create invoice
 Route::get('/crear-factura', function () {
     return view('invoice.create-invoice');
@@ -27,14 +27,20 @@ Route::get('/crear-factura', function () {
 
 //submit invoice data to db
 Route::post('submit-invoice','InvoiceController@SubmitInvoice')->name('submit.invoice');
+
 //suplier
 Route::get('/proveedores', function () {
     return view('invoice.supplier-list');
 });
+
 //add suplier
 Route::get('/nuevo-proveedor', function () {
     return view('invoice.add-supplier');
 });
+
+//add supplier to db
+Route::post('submit-supplier','SupplierController@SubmitSupplier')->name('submit.supplier');
+
 //facility data
 Route::get('/datos-centro', function () {
     return view('medical.index');
@@ -62,3 +68,7 @@ Route::get('/patologias',"PathalogyController@getAllpath");
 //pathology action page not created bc only single page is created for only one pathelogy
 //get path data completed using db
 //user, establisment,services,staff,patient
+//added patient id field
+//report getting top data from db
+//nothing on http://localhost:8000/empleados.htm page
+//completed supplier added page

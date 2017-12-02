@@ -168,18 +168,9 @@
 
             <div class="right clearfix">
               <ul class="nav navbar-nav pull-right right-navbar-nav">
-                <li class="nav-icon-btn dropdown">
-                </li>
-                <li>
-                  <a href="http://pre.fisiosite.com/establishments/show/60" target="_blank" title="see my company">
-                    <i class="fa fa-external-link"></i>
-                    </a>
-                </li>
-
+              
                 <li class="dropdown">
-                  <a href="file:///Users/muuwinmac2/Desktop/PHM2.htm#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="text-bg">ICOT – REHAB FACILITY EL PINO</span><span class="caret"></span>
-                    </a>
+
 
                   <ul id="main-establishment-selector" class="dropdown-menu" role="menu">
                     <li>
@@ -269,9 +260,6 @@
 
                 </li>
 
-                <li class="nav-btn">
-                  <!-- Añadir boton nueva alta de establecimiento -->
-                  <a href="http://pre.fisiosite.com/owners/myestablishments/add">New establishment</a> </li>
 
 
                 <!-- 3. $NAVBAR_ICON_BUTTONS =======================================================================
@@ -288,14 +276,6 @@
     -->
 
                 <li class="nav-icon-btn nav-icon-btn-danger dropdown">
-                  <a href="file:///Users/muuwinmac2/Desktop/PHM2.htm#notifications" class="dropdown-toggle" data-toggle="dropdown">
-        <span class="label">
-                                20                          </span>
-        <i class="nav-icon fa fa-bullhorn"></i>
-        <span class="small-screen-text">Notifications</span>
-    </a>
-
-                  <!-- NOTIFICATIONS -->
 
                   <div class="dropdown-menu widget-notifications no-padding" style="width: 300px">
                     <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 250px;">
@@ -557,70 +537,10 @@
 
 
 
-                <li class="nav-icon-btn nav-icon-btn-danger dropdown">
-                  <a href="file:///Users/muuwinmac2/Desktop/PHM2.htm#notifications" class="dropdown-toggle" data-toggle="dropdown">
-        <span class="label">1</span>
-        <i class="nav-icon fa fa-book"></i>
-        <span class="small-screen-text">Pending requests</span>
-    </a>
-
-                  <!-- NOTIFICATIONS -->
-
-                  <div class="dropdown-menu widget-notifications no-padding" style="width: 300px">
-                    <div class="notifications-list" id="main-navbar-notifications">
-
-
-                      <div class="notification">
-                        <div class="notification-title text-warning">Pending request</div>
-                        <div class="notification-description">
-                          No services</div>
-                        <div class="notification-description">
-                          Madrid</div>
-
-                        <div class="notification-icon fa fa-book bg-warning"></div>
-
-                      </div>
-                      <!-- / .notification -->
-
-
-                    </div>
-                    <!-- / .notifications-list -->
-                  </div>
-                  <!-- / .dropdown-menu -->
-                </li>
-
-
-
-
-
 
 
                 <!-- /3. $END_NAVBAR_ICON_BUTTONS -->
 
-
-                <li class="dropdown">
-                  <a href="file:///Users/muuwinmac2/Desktop/PHM2.htm#" class="dropdown-toggle user-menu" data-toggle="dropdown">
-
-                <img src="{{ asset('public/PHM_files/images/thumb_foto-perfil-perfil.jpg') }}" class="account-picture img-rounded" size="thumb" alt="tu imagen">
-
-    <span>My account</span>
-    </a>
-                  <ul class="dropdown-menu">
-
-                    <li>
-
-                      <a href="http://pre.fisiosite.com/owners/owners/account"><i class="fa fa-user fa-fw"></i>My account</a>
-
-
-
-                    </li>
-
-                    <li class="divider"></li>
-                    <li>
-                      <a href="http://pre.fisiosite.com/app/logout"><i class="fa fa-sign-out fa-fw"></i>Exit</a> </li>
-
-                  </ul>
-                </li>
               </ul>
               <!-- / .navbar-nav -->
 

@@ -25,8 +25,9 @@ curl_setopt($ch, CURLOPT_URL,$api_url_get);
 $result=curl_exec($ch);
 // Closing
 curl_close($ch);
+$ar = json_decode($result);
 
-dd($result);
+return $ar->response->Establishment->id;
 
   //dd($data);
     # code...

@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\invoice;
+use App\Http\Controllers\ApiController;
+use Session;
+use Redirect;
 class InvoiceController extends Controller
 {
     //
+
     public function SubmitInvoice(Request $req)
     {
+      $api = new ApiController();
       $invoice = new invoice;
       $invoice->person = $req->person;
       $invoice->fname = $req->fname;
@@ -28,11 +33,20 @@ class InvoiceController extends Controller
       $invoice->payment = $req->payment;
       $invoice->ccc = $req->ccc;
       $invoice->serviceissue = $req->serviceissue;
-      $invoice->establisment_id = "ddd";
+      $invoice->establisment_id = $api->getEstid();
       $invoice->postal = $req->postal;
+      $invoice->fk_pat_id = "1234";
       $invoice->save();
-      dd($req->all());
+      Session::flash('message', "Invoice Create Successfully!");
+      return Redirect::back();
 
+      # code...
+    }
+
+    public function getInvoiceReport()
+    {
+      $invoice = invoice::take(5)->get();
+      return view('invoice.invoice-report')->with('invoice',$invoice);
       # code...
     }
 }

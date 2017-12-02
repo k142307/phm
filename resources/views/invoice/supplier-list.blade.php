@@ -13,7 +13,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 margin-5">
               <h5>Suppliers</h5>
               <div class=" margin-5 p10">
-                <button type="button" class="btn boton-verde btn-primary margin-5" onclick=" window.location.href='{{ url('crear-factura') }}' ">Add Supplier</button>
+                <button type="button" class="btn boton-verde btn-primary margin-5" onclick=" window.location.href='{{ url('nuevo-proveedor') }}' ">Add Supplier</button>
               </div>
             </div>
 
