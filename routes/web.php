@@ -41,8 +41,9 @@ Route::post('submit-supplier','SupplierController@SubmitSupplier')->name('submit
 
 //facility data
 Route::get('/datos-centro', function () {
-    return view('medical.index');
+    return view('invoice.add-facility');
 });
+Route::post('submit-facility','FacilityCotroller@submitFacility')->name('submit.facility');
 //service list
 Route::get('/servicios', function () {
     return view('invoice.service-list');
