@@ -38,6 +38,12 @@ class SupplierController extends Controller
       return Redirect::back();
     }
 
+    public function showSupplierList()
+    {
+      $sl = supplier::paginate('4',['sname','saddress','regdate']);
+      return view('invoice.supplier-list')->with('sl',$sl);
+    }
+
     public function getDate()
     {
       $dt = new DateTime();

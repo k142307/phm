@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('medical.index');
 });
 
-Route::get('get','SupplierController@getDate');
+Route::get('get','SupplierController@showSupplierList');
 
 //invoice report
 Route::get('/facturacion','InvoiceController@getInvoiceReport');
@@ -29,9 +29,7 @@ Route::get('/crear-factura', function () {
 Route::post('submit-invoice','InvoiceController@SubmitInvoice')->name('submit.invoice');
 
 //suplier
-Route::get('/proveedores', function () {
-    return view('invoice.supplier-list');
-});
+Route::get('/proveedores','SupplierController@showSupplierList');
 
 //add suplier
 Route::get('/nuevo-proveedor', function () {
@@ -72,3 +70,4 @@ Route::get('/patologias',"PathalogyController@getAllpath");
 //report getting top data from db
 //nothing on http://localhost:8000/empleados.htm page
 //completed supplier added page
+//supplier list with pagination completed
