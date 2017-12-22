@@ -32,7 +32,7 @@ class SupplierController extends Controller
       $supplier->phone= $req->phone;
       $supplier->cell= $req->cell;
       $supplier->regdate = $this->getDate();
-      $supplier->establishment_id = "23";
+      $supplier->establishment_id = $api->getEstid();
       $supplier->save();
       Session::flash('message', "supplier Create Successfully!");
       return Redirect::back();

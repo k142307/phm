@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('medical.index');
-});
+Route::get('/','InvoiceController@getInvoiceReport');
 
 Route::get('get','SupplierController@showSupplierList');
 
