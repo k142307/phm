@@ -10,6 +10,11 @@ use Redirect;
 class InvoiceController extends Controller
 {
     //
+    public function test(Request $req)
+    {
+      dd($req->id);
+      # code...
+    }
 
     public function SubmitInvoice(Request $req)
     {

@@ -40,7 +40,9 @@ class SupplierController extends Controller
 
     public function showSupplierList()
     {
+
       $sl = supplier::paginate('4',['sname','saddress','regdate']);
+
       return view('invoice.supplier-list')->with('sl',$sl);
     }
 

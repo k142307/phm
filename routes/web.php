@@ -13,6 +13,8 @@
 
 Route::get('/','InvoiceController@getInvoiceReport');
 
+Route::get('/token','ApiController@getEstid');
+
 Route::get('get','SupplierController@showSupplierList');
 
 //invoice report
@@ -47,10 +49,17 @@ Route::get('/datos-centro', function () {
     return view('invoice.add-facility');
 });
 Route::post('submit-facility','FacilityCotroller@submitFacility')->name('submit.facility');
+
+
 //service list
-Route::get('/servicios', function () {
-    return view('invoice.service-list');
+Route::get('/servicios','ServiceController@ShowServiceList');
+
+//service detail
+Route::get('/info-servicio',function()
+{
+  return view('invoice.service-detail');
 });
+
   //create service missing
 Route::get('/sgg', function () {
     return view('invoce.index');

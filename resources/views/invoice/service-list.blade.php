@@ -29,11 +29,17 @@
       </thead>
       <tbody>
         <tr class="even pointer">
-
-          <td class=" last"><a href="factura.htm">Ver</a>
+          @foreach($services as $key=>$val)
+          <td>{{ $val['name'] }}</td>
+          <td>{{ $val['cost'] }}</td>
+          <td>{{ $val['length'] }}</td>
+          <td>{{ $val['staff'] }}</td>
+          <td>{{ $val['timetable'] }}</td>
+          <td class=" last"><a href="factura.htm">ver</a>
             <a href="#"> / Edit</a>
           </td>
         </tr>
+        @endforeach
       </tbody>
     </table>
     <div class="text-center p20">
