@@ -52,13 +52,10 @@ Route::post('submit-facility','FacilityCotroller@submitFacility')->name('submit.
 
 
 //service list
-Route::get('/servicios','ServiceController@ShowServiceList');
+Route::get('servicios','ServiceController@ShowServiceList');
 
 //service detail
-Route::get('/info-servicio',function()
-{
-  return view('invoice.service-detail');
-});
+Route::get('/info-servicio/{id}','ServiceController@DetailService')->name('service.detail');
 
   //create service missing
 Route::get('/sgg', function () {

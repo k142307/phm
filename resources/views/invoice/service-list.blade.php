@@ -35,8 +35,8 @@
           <td>{{ $val['length'] }}</td>
           <td>{{ $val['staff'] }}</td>
           <td>{{ $val['timetable'] }}</td>
-          <td class=" last"><a href="factura.htm">ver</a>
-            <a href="#"> / Edit</a>
+          <td class=" last">
+            <a href="{{ route('service.detail', $val['id']) }}">ver / Edit</a>
           </td>
         </tr>
         @endforeach

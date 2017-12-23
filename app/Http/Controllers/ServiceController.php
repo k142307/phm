@@ -13,6 +13,7 @@ class ServiceController extends Controller
     $api = new ApiController();
     $response = $api->MakeConnection();
     $response = $response->Services;
+    $i = 0;
     foreach ($response as $key => $value) {
 
       $name = $value->Service->name;
@@ -36,10 +37,38 @@ class ServiceController extends Controller
         $staff = "NO PROFESSIONAL";
       }
 
-      $myarray[] = array("name"=>$name, "timetable"=>$timetable, "staff"=>$staff, "cost"=>$cost,"length"=>$length);
+      $myarray[] = array("id"=>$i, "name"=>$name, "timetable"=>$timetable, "staff"=>$staff, "cost"=>$cost,"length"=>$length);
+      $i++;
     }
     return view('invoice.service-list')->with('services',$myarray);
 
   //  dd($response->Services);
   }
+
+  public function DetailService(Request $req)
+  {
+    $api = new ApiController();
+    $response = $api->MakeConnection();
+    $response = $response->Services[$req->id];
+
+    $name = $response->Service->name;
+    $des = $response->Service->description;
+    $cost = $response->Service->price;
+    $length = $response->Service->duration;
+    $tags = $response->Service->tag;
+    $tags = explode(",",$tags);
+
+    $myarray = array(
+      "name"=>$name,
+      "des"=>$des,
+      "tags"=>$tags,
+      "cost"=>$cost,
+      "length"=>$length);
+
+      return view('invoice.service-detail')->with('services',$myarray);
+
+
+    echo $name;
+  }
+
 }

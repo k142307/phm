@@ -14,13 +14,13 @@
     <div class="p10 col-lg-12 col-md-12 col-sm-12 col-xs-12 fondo-gris">
       <h5 class="no-margin-bott col-lg-2 col-md-4 col-sm-4 col-xs-12 no-padding-di" style="
                             font-style: italic;
-                        ">Sports physiotherapy</h5>
+                        ">{{$services['name']}}</h5>
       <h5 class="no-margin-bott col-lg-2 col-md-4 col-sm-4 col-xs-12 no-padding-di" style="
                             font-style: italic;
-                        ">Length: 30 min</h5>
+                        ">Length: $services['length'] min</h5>
       <h5 class="no-margin-bott col-lg-2 col-md-4 col-sm-4 col-xs-12 no-padding-di" style="
                             font-style: italic;
-                        ">Cost:  45€</h5>
+                        ">Cost:  $services['cost']€</h5>
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p10">
         <span class="tag mtop-10" style="
                             background: #555;
