@@ -2,8 +2,10 @@
 
 </div>
 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 margin-5">
-  <h5>Service information</h5>
-
+  <h5>Service Information</h5>
+  <div class=" margin-5 p10">
+    <button type="button" class="btn boton-verde btn-primary margin-5" onclick=" window.location.href='{{ url('servicios') }}' ">Back</button>
+  </div>
 </div>
 <div class=" col-md-12 col-sm-12 col-xs-12 col-lg-12 fondo-blanco no-padding-di">
 
@@ -17,11 +19,12 @@
                         ">{{$services['name']}}</h5>
       <h5 class="no-margin-bott col-lg-2 col-md-4 col-sm-4 col-xs-12 no-padding-di" style="
                             font-style: italic;
-                        ">Length: $services['length'] min</h5>
+                        ">Length: {{$services['length']}} min</h5>
       <h5 class="no-margin-bott col-lg-2 col-md-4 col-sm-4 col-xs-12 no-padding-di" style="
                             font-style: italic;
-                        ">Cost:  $services['cost']€</h5>
+                        ">Cost:  {{$services['cost']}}€</h5>
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p10">
+        @foreach($services['tags'] as $key => $val)
         <span class="tag mtop-10" style="
                             background: #555;
                             color: white;
@@ -34,14 +37,14 @@
                             font-weight: 500;
                             margin-bottom: 5px;
                             font-family: helvetica;">
-                            <span>Sports physiotherapy</span></span>
+                            <span>{{ $val }}</span></span>
+          @endforeach
       </div>
     </div>
 
-    <p style="text-align:justify" class="no-padding-di col-lg-12 col-md-12 col-sm-12 col-xs-12 mbott-20">Plantar fasciitis consists of inflammation (-itis) of the plantar fascia, this structure is a band of elastic tissue that extends from the calcaneus, heel bone, to the area of the metatarsals, located in front of the fingers in the plant of the foot.
-      This structure has an essential function of maintaining the plantar arch, absorbing and returning the energy that is produced when the foot hits the ground.<strong style="
-                        "></p>
-
+    <p style="text-align:justify" class="no-padding-di col-lg-12 col-md-12 col-sm-12 col-xs-12 mbott-20">
+      {{ $services['des'] }}
+    </p>
 
   </div>
 </div>

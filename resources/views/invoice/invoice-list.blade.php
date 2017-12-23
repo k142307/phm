@@ -41,7 +41,7 @@
           <td class=" ">{{ $val->invoicedate }}</td>
           <td class=" ">{{$val->payment}}€</td>
           <td class=" ">OK</td>
-          <td class=" last"><a href="factura.htm">Ver</a>
+          <td class=" last"><a href="factura">Ver</a>
             <a href="#"> / Edit</a>
           </td>
         </tr>
