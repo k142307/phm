@@ -3,7 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
-
+use App\Http\Controllers\ApiController;
+use session;
 class token
 {
     /**
@@ -15,8 +16,36 @@ class token
      */
     public function handle($request, Closure $next)
     {
+        //session()->flush();
+        if(session()->has('token'))
+        {
+          if($request->token == session('token'))
+          {
 
-      
+          }
+          else {
+            $this->SetTokenSession($request->token);
+          }
+        }
+        else {
+
+          $this->SetTokenSession($request->token);
+
+        }
+
+
         return $next($request);
+    }
+    protected function SetTokenSession($token)
+    {
+      $api = new ApiController($token);
+      if($api->TestConnection())
+      {
+
+        session(['token' => $token]);
+      }
+      else {
+        throw new \Exception("wrong token provided");
+      }
     }
 }

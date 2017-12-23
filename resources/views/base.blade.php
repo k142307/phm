@@ -168,7 +168,7 @@
 
             <div class="right clearfix">
               <ul class="nav navbar-nav pull-right right-navbar-nav">
-              
+
                 <li class="dropdown">
 
 
@@ -608,7 +608,7 @@
                     </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="{{ url('facturacion') }}">Invoicing</a>
+              <a href="{{ route('facturacion',session('token')) }}">Invoicing</a>
             </li>
             <li class="subnavbar-open-right">
               <a href="{{ url('proveedores') }}">Suppliers</a>
@@ -617,7 +617,7 @@
               <a href="{{ url('datos-centro') }}">Facility data</a>
             </li>
             <li>
-              <a href="{{ url('servicios') }}">Services</a>
+              <a href="{{ route('service',session('token')) }}">Services</a>
             </li>
             <li>
               <a href="{{ url('facturas') }}">Invoices</a>

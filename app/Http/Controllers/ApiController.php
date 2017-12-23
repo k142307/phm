@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 class ApiController extends Controller
 {
 
-  protected $token = 'a6433350aa0cbbbc876ccdd9387355e6';
+  protected $token;
   protected $api_url_get = 'http://dev.fisiosite.com/apiv0/user/token/';
+
+   public function __construct($token="")
+  {
+    $this->token = $token;
+  }
 
 
   public function getEstid()
@@ -49,6 +54,21 @@ class ApiController extends Controller
     curl_close($ch);
     $ar = json_decode($result);
     return $ar->response;
+  }
+
+  public function TestConnection()
+  {
+    $res = $this->MakeConnection();
+    if(isset($res->Establishment->id))
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+
+
   }
 
 

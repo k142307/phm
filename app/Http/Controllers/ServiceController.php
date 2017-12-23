@@ -10,7 +10,7 @@ class ServiceController extends Controller
   protected $myarray;
   public function ShowServiceList()
   {
-    $api = new ApiController();
+    $api = new ApiController(session('token'));
     $response = $api->MakeConnection();
     $response = $response->Services;
     $i = 0;
@@ -47,7 +47,7 @@ class ServiceController extends Controller
 
   public function DetailService(Request $req)
   {
-    $api = new ApiController();
+    $api = new ApiController(session('token'));
     $response = $api->MakeConnection();
     $response = $response->Services[$req->id];
 

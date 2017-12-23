@@ -36,7 +36,7 @@
           <td>{{ $val['staff'] }}</td>
           <td>{{ $val['timetable'] }}</td>
           <td class=" last">
-            <a href="{{ route('service.detail', $val['id']) }}">ver / Edit</a>
+            <a href="{{ route('service.detail', [session('token'),$val['id']] ) }}">ver / Edit</a>
           </td>
         </tr>
         @endforeach

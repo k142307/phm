@@ -10,15 +10,27 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix'=>"token/{token}",'middleware'=>'token'],function(){
 
 Route::get('/','InvoiceController@getInvoiceReport');
+
+//invoice report
+Route::get('/facturacion','InvoiceController@getInvoiceReport')->name('facturacion');
+
+//service list
+Route::get('servicios','ServiceController@ShowServiceList')->name('service');
+
+//service detail
+Route::get('/info-servicio/{id}','ServiceController@DetailService')->name('service.detail');
+
+});
 
 Route::get('/token','ApiController@getEstid');
 
 Route::get('get','SupplierController@showSupplierList');
 
-//invoice report
-Route::get('/facturacion','InvoiceController@getInvoiceReport');
+
+
 
 //create invoice
 Route::get('/crear-factura', function () {
@@ -51,11 +63,7 @@ Route::get('/datos-centro', function () {
 Route::post('submit-facility','FacilityCotroller@submitFacility')->name('submit.facility');
 
 
-//service list
-Route::get('servicios','ServiceController@ShowServiceList');
 
-//service detail
-Route::get('/info-servicio/{id}','ServiceController@DetailService')->name('service.detail');
 
   //create service missing
 Route::get('/sgg', function () {

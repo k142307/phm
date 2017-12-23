@@ -4,7 +4,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 margin-5">
   <h5>Service Information</h5>
   <div class=" margin-5 p10">
-    <button type="button" class="btn boton-verde btn-primary margin-5" onclick=" window.location.href='{{ url('servicios') }}' ">Back</button>
+    <button type="button" class="btn boton-verde btn-primary margin-5" onclick=" window.location.href='{{ route('service',session('token')) }}' ">Back</button>
   </div>
 </div>
 <div class=" col-md-12 col-sm-12 col-xs-12 col-lg-12 fondo-blanco no-padding-di">
