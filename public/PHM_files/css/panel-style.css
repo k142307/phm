@@ -66,7 +66,7 @@
     color: #696969 !important;
     font-size: 16px !important;
     margin-left: 10px !important;
-    font-weight: 300 !important;   
+    font-weight: 300 !important;
  }
 
 /* FIN CABECERAS */
@@ -191,7 +191,7 @@
 
  .mbott-30 {
   margin-bottom: 30px;
- } 
+ }
 
  .mbott-10 {
   margin-bottom: 10px;
@@ -318,7 +318,7 @@
    }
 
    .mtop-10 {
-    margin-top:10px; 
+    margin-top:10px;
    }
 
    .mtop-20 {
@@ -333,11 +333,11 @@
 }
    .m10 {
     margin:10px !important;
-   } 
-     
+   }
+
      .m5 {
     margin:5px !important;
-   } 
+   }
     .titulo-oscuro {
     font-weight: 400 !important;
    }
@@ -353,7 +353,7 @@
 
    .texto-tarifas{
        text-align: left;
-   
+
     margin-left: 10px;
 }
  .line-1 {
@@ -418,10 +418,11 @@
 color: white !important;
   }
 
- 
+
 /*INPUTS*/
 
  .estilo-input {
+    resize: vertical;
     display: inline-block;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -498,7 +499,7 @@ font-size: 14px !important;
     font-weight: 300 !important;
     background-color: #f9f9f9;
 }
-  
+
 /* BOTONES*/
   .boton-verde {
     border-radius: 5px !important;
@@ -533,7 +534,7 @@ font-size: 14px !important;
     font-size: 14px;
     font-weight: 300;
     color: white;
-    text-align: center; 
+    text-align: center;
   }
 /* FIN TEXTO BOTONES*/
 
@@ -596,7 +597,7 @@ h4 {
 }
 
 .font-300 {
-  font-weight:300; 
+  font-weight:300;
 }
 
 .rating > span:hover:before {
@@ -608,7 +609,7 @@ h4 {
     background: transparent;
     border: none;
 }
-  
+
   /* Barra dolor */
 
   .contenedor-barra {

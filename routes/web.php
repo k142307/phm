@@ -10,6 +10,57 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//medical history
+Route::get('tipo-paciente',function(){
+  return view('medical.index');
+});
+
+//new patient 1st page
+//medical history
+Route::get('phm',function(){
+  return view('medical.phm');
+});
+
+//new patient 2nd page
+//clinicala history
+Route::get('historias-clinicas',function(){
+  return view('medical.clinic-history');
+});
+//new patient 3rd (1) page
+//phm muscle
+Route::get('PHM-MUSCULO',function(){
+  return view('medical.phm-muscle');
+});
+
+//new patient 3rd (2) page
+//neuro
+Route::get('PHM-NEURO',function(){
+  return view('medical.phm-neuro');
+});
+//new patient 3rd (2) page
+//urogine
+Route::get('PHM-UROGINE',function(){
+  return view('medical.phm-urogine');
+});
+
+//new patient 4th page
+//resumen
+Route::get('resumen',function(){
+  return view('medical.resumen');
+});
+
+//new patient card 5th page
+//summary
+Route::get('fin-tratamiento',function(){
+  return view('medical.treatment-end');
+});
+
+//patient list
+Route::get('pacientes',function(){
+  return view('medical.patient-list');
+});
+
 Route::group(['prefix'=>"token/{token}",'middleware'=>'token'],function(){
 
 Route::get('/','InvoiceController@getInvoiceReport');
@@ -24,6 +75,7 @@ Route::get('servicios','ServiceController@ShowServiceList')->name('service');
 Route::get('/info-servicio/{id}','ServiceController@DetailService')->name('service.detail');
 
 });
+Route::get('add-service','ServiceController@AddNewService');
 
 Route::get('/token','ApiController@getEstid');
 
@@ -56,6 +108,9 @@ Route::get('/nuevo-proveedor', function () {
 //add supplier to db
 Route::post('submit-supplier','SupplierController@SubmitSupplier')->name('submit.supplier');
 
+//show facility list data
+Route::get('/facility-list','FacilityCotroller@showFacilityList');
+
 //facility data
 Route::get('/datos-centro', function () {
     return view('invoice.add-facility');
@@ -85,3 +140,21 @@ Route::get('/patologias',"PathalogyController@getAllpath");
 //nothing on http://localhost:8000/empleados.htm page
 //completed supplier added page
 //supplier list with pagination completed
+//
+// 1)invoice
+// invoice report list complete (filter based searching remaining)
+// generate invoice complete
+// invoice list compeleted
+// 2)supplier
+// supplier list and add new supplier completed
+// 3)facility
+// add new facility and created facility list (as not given)
+// 4)service
+// service list and service detail compeleted from api
+//
+//
+// incomplete
+// supplier detail page not created so need a detail about what info need to show
+// same as with facility detail page
+// need some detail about invoice detail page to compelte
+// also for service add page,need detail about what info should add

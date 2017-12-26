@@ -586,13 +586,13 @@
 
 
             <li>
-              <a href="/tipo-paciente.htm">Med.History</a>
+              <a href="{{ url('tipo-paciente') }}">Med.History</a>
             </li>
             <li>
-              <a href="/pacientes.htm">My patients</a>
+              <a href="{{ url('pacientes') }}">My patients</a>
             </li>
             <li>
-              <a href="/patologias.htm">Pathologies list</a>
+              <a href="{{  url('patologias') }}">Pathologies list</a>
             </li>
 
           </ul>
@@ -614,7 +614,7 @@
               <a href="{{ url('proveedores') }}">Suppliers</a>
             </li>
             <li class="subnavbar-open-right">
-              <a href="{{ url('datos-centro') }}">Facility data</a>
+              <a href="{{ url('facility-list') }}">Facility data</a>
             </li>
             <li>
               <a href="{{ route('service',session('token')) }}">Services</a>

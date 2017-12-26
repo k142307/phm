@@ -5,7 +5,8 @@
 
 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 margin-5">
               <h5>Pathology list</h5>
-            </div><div class=" col-md-12 col-sm-12 col-xs-12 col-lg-12 fondo-blanco no-padding-di">
+            </div>
+            <div class=" col-md-12 col-sm-12 col-xs-12 col-lg-12 fondo-blanco no-padding-di">
     <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Pathology table</h2>
 
 <div class="form-group top_search  col-lg-6 col-md-6 col-sm-6 col-xs-12 mtop-10">

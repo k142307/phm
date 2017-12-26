@@ -40,4 +40,12 @@ class FacilityCotroller extends Controller
       return Redirect::back();
 
     }
+
+    public function showFacilityList()
+    {
+
+      $sl = facility::paginate('4',['name','cname','email']);
+
+      return view('invoice.facility-list')->with('facilities',$sl);
+    }
 }

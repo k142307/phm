@@ -61,6 +61,7 @@
                         <option value="barcelona">barcelona</option>
                         <option value="Sevilla">Sevilla</option>
                       </select>
+              <!-- /controls -->
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 mtop-10 no-padding-di">
               <input type="text" class="padding-topbott-5 estilo-input col-sm-12 col-md-12 col-lg-12 col-xs-12" name="postal" placeholder="Postal Code" required>

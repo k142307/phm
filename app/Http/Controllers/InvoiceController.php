@@ -7,6 +7,7 @@ use App\invoice;
 use App\Http\Controllers\ApiController;
 use Session;
 use Redirect;
+use DateTime;
 class InvoiceController extends Controller
 {
     //
@@ -40,6 +41,7 @@ class InvoiceController extends Controller
       $invoice->serviceissue = $req->serviceissue;
       $invoice->establisment_id = $api->getEstid();
       $invoice->postal = $req->postal;
+      $invoice->regdate = $this->getDate();
       $invoice->fk_pat_id = "1234";
       $invoice->save();
       Session::flash('message', "Invoice Create Successfully!");
@@ -58,6 +60,12 @@ class InvoiceController extends Controller
     {
       $invoice = invoice::take(5)->get();
       return view('invoice.invoice-report')->with('invoice',$invoice);
+      # code...
+    }
+    public function getDate()
+    {
+      $dt = new DateTime();
+      return $dt->format('Y-m-d');
       # code...
     }
 }

@@ -66,9 +66,13 @@ class ServiceController extends Controller
       "length"=>$length);
 
       return view('invoice.service-detail')->with('services',$myarray);
-
-
     echo $name;
+  }
+
+  public function AddNewService()
+  {
+    $api = new ApiController("a6433350aa0cbbbc876ccdd9387355e6");
+    $api->getSaveCurl();
   }
 
 }
